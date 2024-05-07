@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+</head>
+<body>
+    <h1>Меню сайта</h1>
+    <ul>
+        {% for item in items %}
+        <li>
+            <a href="{{ item.link }}" {% if not item.active %}style="color: grey;"{% endif %}>
+                {{ item.name }}
+            </a>
+        </li>
+        {% empty %}
+        <li>Нет доступных пунктов меню.</li>
+        {% endfor %}
+        <li>
+            <a href="rooms_1.html">Комнаты</a>
+        </li>
+    </ul>
+</body>
+</html>
