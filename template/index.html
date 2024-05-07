@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	{% load static %}
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
-	<link rel="shortcut icon" href="{% static 'media/ffav.png' %}">
-	<title>Hotel</title>
-	<script type="text/javascript">
-		
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель Bagysh</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
-<form method="POST" action="/room">
-	{% csrf_token %}
-	<table>
-		<tr>
-			<td><p class="ttl">Check in</p></td>
-			<td><input type="date" name="check_in"></td>
-		</tr>
-		<tr>
-			<td><p class="ttl">Check out</p></td>
-			<td><input type="date" name="check_out"></td>
-		</tr>
-	</table>
-	<button class="vtn">Search</button>
-</form>
-<a href="/list_booked"><button class="vtn">List booked rooms</button></a>
+    <header>
+        <nav>
+            <!-- Здесь будут ссылки или кнопки для навигации -->
+            <a href="{% url 'room_list' %}">Комнаты</a> <!-- Предполагается, что у вас есть имя URL 'rooms_1' в urls.py -->        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать в Отель Bagysh</h1>
+            <p>Отель Bagysh открыл свои двери для первых гостей и предлагает уникальные услуги и превосходное обслуживание.</p>
+        </section>
+        <aside class="booking-form">
+            <form>
+                <label for="arrival-date">Дата заезда:</label>
+                <input type="date" id="arrival-date" name="arrival-date">
+                <label for="departure-date">Дата выезда:</label>
+                <input type="date" id="departure-date" name="departure-date">
+                <button type="submit">Проверить наличие номеров</button>
+            </form>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2024 Отель Bagysh</p>
+    </footer>
 </body>
 </html>

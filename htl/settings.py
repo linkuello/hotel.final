@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rooms_1',
+    'nav',
+    'about_us',
+    'rest_framework',
+
     
     
 ]

@@ -1,51 +1,53 @@
 body {
-  background: url('media/wll.jpg');
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position-x: center;
-  background-position-y: center;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
-.ttl{
-  font-weight: bold;
-  font-size: 23px;
-}
-input{
-  font-size: 20px;
-}
-form{
-  margin-top: 15vh;
-  background: #c4b28f;
-  position: relative;
-  width: 40%;
-  text-align: center;
-  left: 30%;
-  box-shadow: 0px 0px 10px black;
-}
-td{
-  margin: 0px;
-}
-tr{
-  text-align: center;
-  margin: 0px;
-}
-.vtn{
-  background: white;
-  font-size: 20px;
-  border: solid;
-  margin: 1vh;
-}
-.vtn:hover{
-  background: black;
+
+header nav {
+  background: #003580;
   color: white;
-  transform: rotateY(10deg);
-  border-width: 0px;
-  padding: 1vh;
-  box-shadow: 0px 0px 10px black;
+  padding: 10px;
+  text-align: center;
 }
-@media screen and (max-width:900px) {
-  form{
-    position: relative;
-    width: 80%;
-    left: 10%;
-  }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.hero {
+  background: url('path_to_your_hotel_image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.booking-form form {
+  background: lightgray;
+  padding: 20px;
+  width: 300px; /* Adjust as per your layout */
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #003580;
+  color: white;
+}
+
+input[type="date"] {
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  background-color: #ff6200;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
 }
