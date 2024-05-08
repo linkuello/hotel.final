@@ -1,18 +1,15 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from views import views
-from django.urls import include, path
-
+# Уточните, из какого приложения импортируются представления
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home),
-    path('room', views.Room),
-    path('book/<str:room>/<str:in_d>/<str:out_d>/<str:details>',views.Book),
-    path('list_booked', views.list_booked),
-    path('debook/<str:room>', views.deBook),
-    path('nav/', include('nav.urls')),
-    path('rooms/', include('rooms_1.urls')),
-    path('i18n/', include('django.conf.urls.i18n')),
-
-
+    path('', views.Home, name='home'),  # Добавлен аргумент name для удобства использования в шаблонах
+    path('room/', views.Room, name='room'),
+    path('book/<str:room>/<str:in_d>/<str:out_d>/<str:details>', views.Book, name='book'),
+    path('list_booked/', views.list_booked, name='list_booked'),
+    path('debook/<str:room>', views.deBook, name='debook'),
+    path('nav/', include('nav.urls')),  # Подключение URL из приложения nav
+    path('rooms/', include('rooms_1.urls')),  # Подключение URL из приложения rooms_1
+    path('i18n/', include('django.conf.urls.i18n')),  # URL-адреса для смены языка
 ]

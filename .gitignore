@@ -1,0 +1,39 @@
+# Игнорирование баз данных
+*.sqlite3
+*.db
+
+# Игнорирование байт-кодов Python
+*.pyc
+__pycache__/
+
+# Игнорирование лог-файлов и каталогов с данными
+*.log
+*.csv
+*.json
+db.json
+logs/
+data/
+
+# Игнорирование конфигурационных файлов, содержащих секретные ключи
+*.secret
+*.key
+
+# Игнорирование каталогов виртуальной среды
+venv/
+ENV/
+
+# Игнорирование настроек IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Node modules and dependency directories
+node_modules/
+bower_components/
+
+# Игнорирование конфигураций системы сборки и зависимостей
+/build/
+/target/
+*.iml
+*.xml
