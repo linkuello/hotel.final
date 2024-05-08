@@ -11,11 +11,11 @@
     <header>
         <nav>
             {% load i18n %}
-<a href="{% url 'set_language' %}?language=en&next={{ request.path }}">{{ _('En') }}</a>
-
-<a href="{% url 'set_language' %}?language=ru&next={{ request.path }}">{{ _('Ru') }}</a>
-
-<a href="{% url 'room_list' %}">Комнаты</a> 
+            <a href="{% url 'set_language' %}?language=en&next={{ request.path }}">{{ _('En') }}</a>
+            <a href="{% url 'set_language' %}?language=ru&next={{ request.path }}">{{ _('Ru') }}</a>
+            <a href="{% url 'room_list' %}">{{ _('Комнаты') }}</a>
+        </nav>
+    </header>
     <main>
         <section class="hero">
             <h1>Добро пожаловать в Отель Bagysh</h1>
