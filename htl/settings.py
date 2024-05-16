@@ -24,10 +24,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rooms_1',
     'nav',
     'about_us',
     'rest_framework',
+    'rooms',
 ]
 
 MIDDLEWARE = [
