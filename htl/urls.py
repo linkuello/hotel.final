@@ -10,6 +10,7 @@ urlpatterns = [
     path('list_booked/', views.list_booked, name='list_booked'),
     path('debook/<str:room>', views.deBook, name='debook'),
     path('nav/', include('nav.urls')),  # Подключение URL из приложения nav
-    path('rooms/', include('rooms_1.urls')),  # Подключение URL из приложения rooms_1
     path('i18n/', include('django.conf.urls.i18n')),  # URL-адреса для смены языка
+    path('rooms/', include('rooms.urls')),
+
 ]

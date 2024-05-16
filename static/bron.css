@@ -1,0 +1,76 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Стили для блока с номерами */
+.room {
+    margin-bottom: 30px;
+}
+
+.room img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.room img:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для блока с кафе */
+.cafe {
+    margin-bottom: 30px;
+}
+
+/* Стили для контактной информации */
+.contact {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 5px;
+}
+
+/* Стили для логотипа */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}

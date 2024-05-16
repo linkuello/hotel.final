@@ -13,7 +13,7 @@
             {% load i18n %}
             <a href="{% url 'set_language' %}?language=en&next={{ request.path }}">{{ _('En') }}</a>
             <a href="{% url 'set_language' %}?language=ru&next={{ request.path }}">{{ _('Ru') }}</a>
-            <a href="{% url 'room_list' %}">{{ _('Комнаты') }}</a>
+            <a href="{% url 'room_list' %}">Комнаты</a>
         </nav>
     </header>
     <main>
@@ -27,9 +27,23 @@
                 <input type="date" id="arrival-date" name="arrival-date">
                 <label for="departure-date">Дата выезда:</label>
                 <input type="date" id="departure-date" name="departure-date">
-                <button type="submit">Проверить наличие номеров</button>
+                <a href="{% url 'room_list' %}" class="button">Проверить наличие номеров</a>
             </form>
         </aside>
+        <section class="contact-info">
+            <h2>Контакты</h2>
+            <p>Адрес: ул. Примерная, д. 123</p>
+            <p>Телефон: +7 123 456 7890</p>
+            <p>Email: info@hotelbagysh.com</p>
+        </section>
+        <section class="social-media">
+            <h2>Подписывайтесь на нас в социальных сетях</h2>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>© 2024 Отель Bagysh</p>

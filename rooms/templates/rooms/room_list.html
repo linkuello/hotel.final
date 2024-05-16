@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список номеров</title>
+</head>
+<body>
+    <h1>Список номеров</h1>
+    {% if rooms %}
+        <ul>
+            {% for room in rooms %}
+                <li>{{ room.name }} - {{ room.price }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет доступных номеров.</p>
+    {% endif %}
+</body>
+</html>
